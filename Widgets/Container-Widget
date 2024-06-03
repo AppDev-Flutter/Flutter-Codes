@@ -1,1 +1,37 @@
-ghfhh
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+class ContainerWidget extends StatefulWidget {
+  const ContainerWidget({super.key});
+
+  @override
+  State<ContainerWidget> createState() => _ContainerWidgetState();
+}
+
+class _ContainerWidgetState extends State<ContainerWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+      body: SafeArea(
+        child: Container(
+          height: 200,
+          decoration: const BoxDecoration(
+            color: Colors.amber,
+             borderRadius: BorderRadius.only(topLeft: Radius.circular(5), bottomLeft: Radius.circular(5),),
+            // border: Border.all(width: 1),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                blurRadius: 2.0,
+                spreadRadius: 0.0,
+                offset: Offset(2.0, 2.0), // shadow direction: bottom right
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
